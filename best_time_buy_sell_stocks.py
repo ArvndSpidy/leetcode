@@ -1,5 +1,5 @@
 """
-Revision number: 1
+Revision number: 2
 
 Description: 
 You are given an array prices where prices[i] is the price of a given stock on the ith day.
@@ -14,12 +14,12 @@ If at any point, left index value is greater than right index value then update 
 
 class Solution:
     def maxProfit(self, prices:list[int]) -> int:
-        l,r = 0,1
+        l,r = 0, 1
         max_profit = 0
         while r < len(prices):
             if prices[l] < prices[r]:
-                current_profit = prices[r] - prices[l]
-                max_profit = max(max_profit,current_profit)
+                curr_profit = prices[r] - prices[l]
+                max_profit = max(max_profit, curr_profit)
             else:
                 l = r
             r += 1
