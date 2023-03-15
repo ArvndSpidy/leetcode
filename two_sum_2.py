@@ -1,3 +1,4 @@
+
 class Solution:
     def twoSum2(self, numbers: list[int], target: int) -> list[int]:
         l, r = 0, len(numbers) - 1
