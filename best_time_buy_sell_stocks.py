@@ -13,17 +13,15 @@ If at any point, left index value is greater than right index value then update 
 """
 
 class Solution:
-    def maxProfit(self, prices:list[int]) -> int:
+    def maxProfit(self, prices:list[int], target:int) -> int:
         l,r = 0, 1
         max_profit = 0
         while r < len(prices):
             if prices[l] < prices[r]:
                 curr_profit = prices[r] - prices[l]
-                max_profit = max(max_profit, curr_profit)
             else:
                 l = r
             r += 1
-        return max_profit
 
 solution = Solution()
 print(solution.maxProfit([7,1,5,6,3]))
